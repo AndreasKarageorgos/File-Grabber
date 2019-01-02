@@ -1,6 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
 
-from os import walk,getlogin,system,mkdir,rmdir
+from os import walk,getlogin,system,mkdir
 from platform import uname
 from time import sleep
 from random import choice,randint
