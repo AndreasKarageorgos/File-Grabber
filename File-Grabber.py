@@ -46,6 +46,6 @@ for roots,dirs,files in walk(path):
 			if uname()[0] == "Linux":
 				system(('cp %s/%s %s/%s' % (roots,name,getlogin(),name)))
 			else:
-				system(('copy %s\\%s %s\\%s && cls' % (roots,name,getlogin(),name)))
+				system(('copy %s\\%s %s\\%s >>null' % (roots,name,getlogin(),name)))
 
 warnMe()
