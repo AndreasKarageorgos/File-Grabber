@@ -1,5 +1,5 @@
 *************************************************************************
-*           This tool is not made for any malicious use.                *
+           This tool is not made for any malicious use.                
 *************************************************************************
 
 Add the executable file to a usb and insert it to the computer that you want to 
