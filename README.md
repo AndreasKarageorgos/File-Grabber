@@ -8,3 +8,7 @@ copy the files.
 I recomend pyinstaller to create an executable file.
 
 ***==> python3 -m pip install pyinstaller <==***
+
+## windows
+
+   
