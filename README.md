@@ -28,8 +28,8 @@ if you want it to run in the background, rename the File-Grabber.py to File-Grab
    
    * without console window
    
-      pyinstaller -F File-Grabber.pyw
+           pyinstaller -F File-Grabber.pyw
   
    * with console window
    
-      pyinstaller -F File-Grabber.py
+           pyinstaller -F File-Grabber.py
